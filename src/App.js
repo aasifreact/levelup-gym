@@ -1,25 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import About from "./components/About";
+import Plans from "./components/Plans";
+import Trainers from "./components/Trainers";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import BarLoader from "./components/BarLoader";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {loading && <BarLoader />}
+      <Navbar />
+
+      <main>
+        <section id="home">
+          <Home />
+        </section>
+
+        <section id="about">
+          <About />
+        </section>
+        <section id="plans">
+          <Plans />
+        </section>
+
+        <section id="trainers">
+          <Trainers />
+        </section>
+
+        <section id="contact">
+          <Contact />
+        </section>
+      </main>
+
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
