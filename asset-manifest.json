@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/levelup-gym/static/css/main.8696ffb7.css",
+    "main.js": "/levelup-gym/static/js/main.05eeb290.js",
+    "static/media/hero.jpg": "/levelup-gym/static/media/hero.e0cc56fd4898894cda23.jpg",
+    "static/media/about.png": "/levelup-gym/static/media/about.166c56a4cbded05880e0.png",
+    "index.html": "/levelup-gym/index.html",
+    "main.8696ffb7.css.map": "/levelup-gym/static/css/main.8696ffb7.css.map",
+    "main.05eeb290.js.map": "/levelup-gym/static/js/main.05eeb290.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8696ffb7.css",
+    "static/js/main.05eeb290.js"
+  ]
+}
